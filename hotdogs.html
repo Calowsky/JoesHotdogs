@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Joe's Hotdogs</title>
+      
+      <style>          
+          header {background-color: brown;}
+          body {background-color: #CCCC00;}
+          h1 { text-align: center }
+
+          .info {
+              column-count: 2;
+              column-fill: balance;
+          }          
+          .info { text-align: center }
+          
+          img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+    </style>
+   </head>
+	
+   <header>
+     <h1> Joe's Hotdogs: Home of the MegaDog </h1>     
+   </header>
+
+   <body>      
+       <div class="info">
+     
+       <script language = "javascript">
+           var numdogs = prompt ("Welcome to Joe's! How many Hotdogs would you like? ", "");
+           var numfries = prompt ("How many fries would you like? ", "");
+           var numsoda = prompt ("How many sodas would you like? ", "");
+
+           var subtotal = ( (numdogs*3.25 )+ (numfries*2.00) + (numsoda*1.50) )
+           var numitems = (numdogs*1)+ (numfries*1)+(numsoda*1);
+           var discount = 0;
+           
+           if(subtotal >= 20) {
+               discount = subtotal*0.1;
+               discount = discount.toFixed(2);
+           }
+           
+           var tax = subtotal*0.0625;
+           tax = tax.toFixed(2);           
+           var total = (subtotal*1) + (tax*1) - (discount*1);
+           total = total.toFixed(2);
+ 
+           document.write("number of hotdogs: ", "");
+           document.write(numdogs, "");
+           document.write("<br>");
+
+           document.write("number of fries: ", "");
+           document.write(numfries, "");
+           document.write("<br>");
+
+           document.write("number of sodas: ", "");
+           document.write(numsoda, "");
+           document.write("<br>");
+           
+           document.write("number of items: ", "");
+           document.write(numitems, "");
+           document.write("<br>");
+           
+           document.write("subtotal: ", "");
+           document.write(subtotal, "");
+           document.write("<br>");
+
+           document.write("discount: ", "");
+           document.write(discount, "");
+           document.write("<br>");
+
+           document.write("tax: ", "");
+           document.write(tax, "");
+           document.write("<br>");
+           
+           document.write("total: ", "");
+           document.write(total, "");
+           document.write("<br>");      
+      </script>
+      
+      </div class="info">
+
+      <img src = https://unsplash.com/photos/w96PYF0Uwjs/download?force=true 
+       height="200"  />
+       
+   </body>
+   
+   
+   
+	
+</html>
